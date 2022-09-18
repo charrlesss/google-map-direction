@@ -15,7 +15,38 @@ const map = new google.maps.Map(
 const directionService = new google.maps.DirectionsService();
 const directionDisplay = new google.maps.DirectionsRenderer();
 
+directionDisplay.setOptions({
+  polylineOptions: {
+    strokeColor: "red",
+    geodesic: true,
+    strokeOpacity: 0.6,
+    strokeWeight: 5,
+  },
+});
 
+directionDisplay.setMap(map);
+
+navigator.geolocation.getCurrentPosition((position) => {
+  lat = position.coords.latitude;
+  long = position.coords.longitude;
+
+  new google.maps.Marker({
+    position: { lat: position.coords.latitude, lng: position.coords.longitude },
+    map,
+    title: "Plate Number",
+  });
+
+  new google.maps.Circle({
+    strokeColor: "#1E90FF",
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: "skyblue",
+    fillOpacity: 0.35,
+    map: map,
+    center: { lat: lat, lng: long },
+    radius: 100,
+  });
+});
 
 function calculateDistance() {
   console.log("lat : " + lat, "long : " + long);
@@ -65,43 +96,5 @@ const autoComplete2 = new google.maps.places.Autocomplete(to, {
   componentRestrictions: { country: "ph" },
 });
 
-let count = 0
 
-function main(){
-  count = count + 10
-  directionDisplay.setOptions({
-    polylineOptions: {
-      strokeColor: "red",
-      geodesic: true,
-      strokeOpacity: 0.6,
-      strokeWeight: 5,
-    },
-  });
-  
-  directionDisplay.setMap(map);
-  
-  navigator.geolocation.getCurrentPosition((position) => {
-    lat = position.coords.latitude ;
-    long = position.coords.longitude  ;
-  
-    new google.maps.Marker({
-      position: { lat: lat, lng: long },
-      map,
-      title: "Plate Number",
-    });
-  
-    new google.maps.Circle({
-      strokeColor: "#1E90FF",
-      strokeOpacity: 0.8,
-      strokeWeight: 2,
-      fillColor: "skyblue",
-      fillOpacity: 0.35,
-      map: map,
-      center: { lat: lat, lng: long },
-      radius: 100,
-    });
-  });
-  setTimeout(main ,1000)
-}
 
-main()
