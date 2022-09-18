@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous"
+    />
+    <!-- Latest compiled and minified JavaScript -->
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Google API</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container-fluid">
+        <h1>Find the Distance Between Two Places</h1>
+        <p>This App Will Help you Calculate Your Travel</p>
+      </div>
+      <div style=" display: flex ;padding-left: 20px; width: 500px;">
+        <div class="inner-addon left-addon" style="flex: 1;">
+          <i class="glyphicon glyphicon-map-marker"></i>
+          <input
+            type="text"
+            id="to"
+            class="form-control"
+            placeholder="Distination"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >Enter your distination.</small
+          >
+        </div>
+        <div style="padding-left: 10px">
+          <button
+            class="btn btn-info btn-lg"
+            style="display: flex; text-align: center; align-items: center"
+            onclick="calculateDistance()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              style="width: 25; color: white"
+            >
+              <path
+                d="M227.7 11.7c15.6-15.6 40.9-15.6 56.6 0l216 216c15.6 15.6 15.6 40.9 0 56.6l-216 216c-15.6 15.6-40.9 15.6-56.6 0l-216-216c-15.6-15.6-15.6-40.9 0-56.6l216-216zm87.6 137c-4.6-4.6-11.5-5.9-17.4-3.5s-9.9 8.3-9.9 14.8v56H224c-35.3 0-64 28.7-64 64v48c0 13.3 10.7 24 24 24s24-10.7 24-24V280c0-8.8 7.2-16 16-16h64v56c0 6.5 3.9 12.3 9.9 14.8s12.9 1.1 17.4-3.5l80-80c6.2-6.2 6.2-16.4 0-22.6l-80-80z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div id="googleMap"></div>
+        <div id="output"></div>
+      </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU-ZlXg_dH92b7-Ue8aFTJj9I_-3LS6U0&libraries=places"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="app.js">
+      <i class="fa-regular fa-diamond-turn-right"></i>
+    </script>
+  </body>
+</html>
