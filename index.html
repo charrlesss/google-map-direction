@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Google API</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container-title">
+        <h1>Find the Distance Between Two Places</h1>
+        <p>This App Will Help you Calculate Your Travel</p>
+      </div>
+        <div class="container-field">
+          <div class="container-input">
+            <div class="inputs" >
+              <div>
+                <input
+                  type="text"
+                  id="from"
+                  class="form-control"
+                  placeholder="From"
+                />
+                <label  for="to">
+                  <small class="form-text text-muted"
+                  >Enter your distination.</small>
+                </label>
+              </div>
+              <div>
+                <input
+                  type="text"
+                  id="to"
+                  class="form-control"
+                  placeholder="To"
+                />
+                <label  for="to">
+                  <small class="form-text text-muted"
+                  >Enter your distination.</small>
+                </label>
+              </div>
+            </div>
+            <div class="to">
+              <button
+                class="btn btn-info btn-lg"
+                onclick="calculateDistance()"
+              >
+               Submit
+              </button>
+            </div>
+          </div>
+          <div>
+            <div id="output"><p class="see-result">See result here!</p></div>
+          </div>
+        </div>
+      <div class="container-fluid">
+        <div id="googleMap"></div>
+      
+      </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU-ZlXg_dH92b7-Ue8aFTJj9I_-3LS6U0&libraries=places"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>

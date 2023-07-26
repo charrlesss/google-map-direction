@@ -1,0 +1,166 @@
+.container-title{
+    color: rgb(31, 30, 30);
+    font-family: Courier;
+    font-weight: bold;
+}
+.container-field{
+    display: flex;
+    column-gap: 20px;
+    margin: 50px 0 ;
+    justify-content: space-between;
+}
+.container-field #output{
+    line-height: 30px;
+    border: 2px solid gray;
+    border-radius: 2px;
+    height: 100%;
+    padding: 10px 20px;
+    color: black;
+    min-width: 300px;
+}
+.container-field #output .see-result{
+    font-size: 20px;
+    color: indigo;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;    
+}
+.container-input{
+    display: flex;
+    flex-direction: column;
+}
+.container-input .inputs{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding-bottom: 20px;
+}
+.container-input .inputs div{
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 5px;
+    color: black;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container-input .inputs input {
+    height: 35px;
+    width: 350px;
+    padding-left:10px ;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: black;
+    border: none;
+    outline: 1px solid rgb(160, 157, 157);
+    border-radius: 2px;
+    box-shadow: 0px 0px 4px 0px gray;
+}
+
+.container-input .inputs input:hover{
+    outline: 1px solid rgb(34, 162, 247);
+    box-shadow: 0px 0px 5px 0px gray;
+}
+.container-input .inputs input:focus{
+    outline: 1px solid rgb(34, 162, 247);
+    box-shadow: 0px 0px 5px 0px gray;
+}
+
+
+.to{
+    width: 200px;
+    border-radius: 2px;
+    height: 40px;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.to button{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: none;
+    box-shadow: 0 0 3px 0 rgba(173, 169, 169, 0.774);
+    cursor: pointer;
+    background-color: rgb(49, 190, 247);
+    border-radius: 3px;
+    font-size: 15px;
+    color: white;
+    letter-spacing: 1.3px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.to button:hover{
+background-color: #31a4c7;
+}
+
+@media (max-width:500px) {
+    .container-input .inputs {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .container-input .inputs input {
+        width: 90%;
+    }
+    .to button{
+        width: 90%;
+    }
+ 
+}
+
+@media (max-width:850px) {
+    .container-field{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        padding-bottom: 50px;
+    }
+}
+body{
+    color: #5bc0de;
+    font-family: "Poppins" , sans-serif;
+}
+.jumbotron{
+    background-color: transparent;
+    margin: 0;
+    padding: 10px;
+}
+.jumbotron h1{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.jumbotron h1,
+.jumbotron p {
+    text-align: center;
+}
+
+.jumbotron p{
+    font-size: 1em;
+}
+#googleMap{
+    width: 100%;
+    height: 100vh;
+}
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.direction{
+    border: 2px solid red;
+}
